@@ -11,14 +11,14 @@ const { href, title, body, technologies } = Astro.props;
 
 <li class="link-card">
 	<a href={href} target="_blank">
-		<h2>
+		<h2 >
 			{title}
 			<span>&rarr;</span>
 		</h2>
-		<section>
+		<section class="flex flex-wrap gap-3">
 			{
 			technologies.map((tech) => (
-				<img src={tech} height="35rem"></img>
+				<img src={tech} class="aspect-square h-10 mt-2"></img>
 			))
 			}
 		</section>
@@ -28,10 +28,6 @@ const { href, title, body, technologies } = Astro.props;
 	</a>
 </li>
 <style>
-	img{
-		margin-right: 0.5rem;
-		margin-top: 1rem;
-	}
 	.link-card {
 		list-style: none;
 		display: flex;

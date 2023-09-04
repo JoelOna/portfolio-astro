@@ -1,0 +1,16 @@
+---
+interface Props{
+    img : string,
+    bio : string,
+}
+const {img, bio} = Astro.props
+---
+
+<aside class="bg-red-300 fixed w-1/3 min-h-screen">
+    <div class="grid place-content-center mt-52">
+        <div class="bg-white h-80 w-80 rounded flex items-center justify-center shadow-xl">
+            <img src={img} alt="" srcset="" class="object-fill rounded-full">
+        </div>
+        <p class="text-center mt-12">{bio}</p>
+    </div>
+</aside>
