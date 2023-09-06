@@ -1,56 +1,65 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
-import MainInfo from '../components/MainInfo.astro';
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+import MainInfo from "../components/MainInfo.astro";
+import About from "../components/About.astro";
 ---
 
 <Layout title="Portfolio | Joel">
-	<MainInfo img="/joel.jpeg" bio="FullStack Web developer"></MainInfo>
-	<main class="flex flex-wrap gap-96">
-		<section class="ms-52  mt-24">
+	<MainInfo img="/joel.jpeg" bio="FullStack Web developer" />
+	<About></About>
+	
+	<main class="flex gap-4"> 
+	  <section class="md:ms-96 md:ps-48 mt-24 sm:ms-72 ">
 		<h3 class="text-white">Proyectos</h3>
-		<ul role="list" class="link-card-grid mt-12">
+		<ul role="list" class="grid md:grid-cols-2 sm:grid-cols-1 gap-4 mt-12"> 
+	
 			<Card
-				href="https://rick-and-morty-five-nu.vercel.app/"
-				title="Rick y Morty"
-				body="Proyecto en angular consumiendo la API de Rick y Morty"
-				technologies={['/angular.svg','/typescript.svg']}
+			  href="https://rick-and-morty-five-nu.vercel.app/"
+			  title="Rick y Morty"
+			  body="Proyecto en Angular consumiendo la API de Rick y Morty."
+			  technologies={["/angular.svg", "/typescript.svg","/bootstrap.svg"]}
+			  img="/rickandmorty.png"
 			/>
 			<Card
-				href="https://rick-and-morty-five-nu.vercel.app/"
-				title="Rick y Morty"
-				body="Proyecto en angular consumiendo la API de Rick y Morty"
-				technologies={['/angular.svg','/typescript.svg']}
-			/>
-			<Card
-				href="https://rick-and-morty-five-nu.vercel.app/"
-				title="Rick y Morty"
-				body="Proyecto en angular consumiendo la API de Rick y Morty"
-				technologies={['/angular.svg','/typescript.svg']}
-			/>
-			<Card
-				href="https://rick-and-morty-five-nu.vercel.app/"
-				title="Rick y Morty"
-				body="Proyecto en angular consumiendo la API de Rick y Morty"
-				technologies={['/angular.svg','/typescript.svg']}
-			/>
-			<Card
-				href="https://rick-and-morty-five-nu.vercel.app/"
-				title="Rick y Morty"
-				body="Proyecto en angular consumiendo la API de Rick y Morty"
-				technologies={['/angular.svg','/typescript.svg']}
-			/>
+			href="https://rick-and-morty-five-nu.vercel.app/"
+			title="Rick y Morty"
+			body="Proyecto en Angular consumiendo la API de Rick y Morty."
+			technologies={["/angular.svg", "/typescript.svg"]}
+			img="/rickandmorty.png"
+		  />
+		  <Card
+		  href="https://rick-and-morty-five-nu.vercel.app/"
+		  title="Rick y Morty"
+		  body="Proyecto en Angular consumiendo la API de Rick y Morty."
+		  technologies={["/angular.svg", "/typescript.svg"]}
+		  img="/rickandmorty.png"
+		/>
+		<Card
+		href="https://rick-and-morty-five-nu.vercel.app/"
+		title="Rick y Morty"
+		body="Proyecto en Angular consumiendo la API de Rick y Morty."
+		technologies={["/angular.svg", "/typescript.svg"]}
+		img="/rickandmorty.png"
+	  />
+		  
+		  <!-- Repite lo anterior para cada tarjeta -->
 		</ul>
-	</section>
+	  </section>
 	</main>
-</Layout>
+	
+  </Layout>
+  
 
 <style>
+	* {
+		overflow-x: hidden;
+	}
 	main {
 		margin: auto;
 		padding: 1rem;
-		width: 800px;
-		max-width: calc(100% - 2rem);
+		/* width: 800px;
+		max-width: calc(100% - 2rem); */
 		color: white;
 		font-size: 20px;
 		line-height: 1.6;
@@ -81,7 +90,10 @@ import MainInfo from '../components/MainInfo.astro';
 	.instructions {
 		margin-bottom: 2rem;
 		border: 1px solid rgba(var(--accent-light), 25%);
-		background: linear-gradient(rgba(var(--accent-dark), 66%), rgba(var(--accent-dark), 33%));
+		background: linear-gradient(
+			rgba(var(--accent-dark), 66%),
+			rgba(var(--accent-dark), 33%)
+		);
 		padding: 1.5rem;
 		border-radius: 8px;
 	}
@@ -96,10 +108,10 @@ import MainInfo from '../components/MainInfo.astro';
 	.instructions strong {
 		color: rgb(var(--accent-light));
 	}
-	.link-card-grid {
+	/* .link-card-grid {
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
 		gap: 2rem;
 		padding: 0;
-	}
+	} */
 </style>
