@@ -10,14 +10,15 @@ import About from "../components/About.astro";
 	<About></About>
 	
 	<main class="flex gap-4"> 
-	  <section class="md:ms-96 md:ps-48 mt-24 sm:ms-72 ">
-		<h3 class="text-white">Proyectos</h3>
+	  <section class="md:ms-96 md:ps-96 mt-24 sm:ms-72 ">
+		<h3 class="text-white pb-2">Proyectos</h3>
+		<hr>
 		<ul role="list" class="grid md:grid-cols-2 sm:grid-cols-1 gap-4 mt-12"> 
 	
 			<Card
 			  href="https://rick-and-morty-five-nu.vercel.app/"
 			  title="Rick y Morty"
-			  body="Proyecto en Angular consumiendo la API de Rick y Morty."
+			  body="Una aplicación que muestra los personajes, episodios y localizaciones de la serie 'Rick And Morty'."
 			  technologies={["/angular.svg", "/typescript.svg","/bootstrap.svg"]}
 			  img="/rickandmorty.png"
 			/>
@@ -42,8 +43,6 @@ import About from "../components/About.astro";
 		technologies={["/angular.svg", "/typescript.svg"]}
 		img="/rickandmorty.png"
 	  />
-		  
-		  <!-- Repite lo anterior para cada tarjeta -->
 		</ul>
 	  </section>
 	</main>
