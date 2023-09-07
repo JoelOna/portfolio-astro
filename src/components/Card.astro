@@ -3,14 +3,15 @@ interface Props {
 	title: string;
 	body: string;
 	href: string;
+	repo:string;
 	technologies: string [];
 	img: string;
 }
 
-const { href, title, body, technologies,img } = Astro.props;
+const { href, title, body, technologies,img ,repo} = Astro.props;
 ---
 
-<li class="link-card md:w-96 sm:w-full ">
+<!-- <li class="link-card md:w-96 sm:w-full ">
 	<a href={href} target="_blank">
 		<img src={img} alt="" class="rounded">
 		<h2 class="pt-4 hover:animate-pulse " >
@@ -28,7 +29,7 @@ const { href, title, body, technologies,img } = Astro.props;
 			{body}
 		</p>
 	</a>
-</li>
+</li> -->
 
 <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
     <a href={img}>
@@ -49,7 +50,9 @@ const { href, title, body, technologies,img } = Astro.props;
 		</section>
         <p class="leading-snug">{body}</p>
 		<section class="grid grid-row">
-        <a href={href} target="_blank" class="mt-4 inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+			{
+				href ? (
+        <a href={href} target="_blank" class="mt-4 inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 transition-all active:transform active:translate-y-1 ">
           
             <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-world-www" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
 				<path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
@@ -65,7 +68,9 @@ const { href, title, body, technologies,img } = Astro.props;
 			</svg>
 			  <label class="ps-2">Visita el resultado final</label>
         </a>
-		 <a href={href} target="_blank" class="mt-4 inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white hover:bg-[#0c0d10] rounded-lg bg-[#17191e] focus:ring-4 focus:outline-none focus:ring-blue-300 ">
+		) : null
+	}
+		 <a href={repo} target="_blank" class="mt-4 inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white hover:bg-[#0c0d10] rounded-lg bg-[#17191e] focus:ring-4 focus:outline-none focus:ring-blue-300 transition-all active:transform active:translate-y-1">
             
             <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github-filled" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
 				<path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
