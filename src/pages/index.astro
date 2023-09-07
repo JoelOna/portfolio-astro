@@ -3,17 +3,22 @@ import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
 import MainInfo from "../components/MainInfo.astro";
 import About from "../components/About.astro";
+import Experience from "../components/Experience.astro";
 ---
 
 <Layout title="Portfolio | Joel">
-	<MainInfo img="/joel.jpeg" bio="FullStack Web developer" />
-	<About></About>
 	
-	<main class="flex gap-4"> 
-	  <section class="md:ms-96 md:ps-96 mt-24 sm:ms-72 ">
-		<h3 class="text-white pb-2">Proyectos</h3>
-		<hr>
-		<ul role="list" class="grid md:grid-cols-2 sm:grid-cols-1 gap-4 mt-12"> 
+	<main class="container-sm">
+		 <MainInfo img="/joel.jpeg" bio="FullStack Web developer" />
+		 <section class="lg:ms-96 lg:ps-96  md:ms-56 md:ps-72 mt-24 sm:ms-72">
+			<About></About>
+		 </section>
+
+
+	  <section class=" lg:ms-96 lg:ps-96  md:ms-72 md:ps-72 mt-24 sm:ms-72 lg:w-full md:w-[78.5%] ">
+		<h3 class="text-white text-2xl pb-2 ">Proyectos</h3>
+		<hr class="w-auto">
+		<ul role="list" class="grid md:grid-cols-2 sm:grid-cols-1 sm:justify-center gap-4 mt-12"> 
 	
 			<Card
 			  href="https://rick-and-morty-five-nu.vercel.app/"
@@ -45,6 +50,7 @@ import About from "../components/About.astro";
 	  />
 		</ul>
 	  </section>
+	  
 	</main>
 	
   </Layout>
