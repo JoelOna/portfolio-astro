@@ -12,13 +12,13 @@ const { href, title, body, technologies,img ,repo} = Astro.props;
 ---
 
 
-<li class=" place-content-center place-items-center max-w-sm  border rounded-lg shadow bg-gray-800 border-gray-700 hover:border-gray-500 hover:scale-105 hover:transition-all mt-12 animate-on-scroll">
+<li class=" place-content-center place-items-center max-w-sm  border rounded-lg shadow bg-gray-800 border-gray-700 hover:scale-105 hover:transition-all  hover:border-gray-500 mt-12 animate-on-scroll">
     <a href={href}>
         <img class="rounded-t-lg" src={img} alt="" />
     </a>
     <div class="p-5">
         <a href={href} target="_blank">
-            <h5 class="mb-2 text-2xl tracking-tight text-gray-900 dark:text-white t-4 hover:text-gray-400">
+            <h5 class="mb-2 text-2xl tracking-tight text-white t-4 hover:text-gray-400">
 			{title}
 		</h5>
         </a>
