@@ -11,27 +11,8 @@ interface Props {
 const { href, title, body, technologies,img ,repo} = Astro.props;
 ---
 
-<!-- <li class="link-card md:w-96 sm:w-full ">
-	<a href={href} target="_blank">
-		<img src={img} alt="" class="rounded">
-		<h2 class="pt-4 hover:animate-pulse " >
-			{title}
-			<span class="ps-2">&rarr;</span>
-		</h2>
-		<section class="flex flex-wrap gap-3">
-			{
-			technologies.map((tech) => (
-				<img src={tech} class="aspect-square h-10 mt-2"></img>
-			))
-			}
-		</section>
-		<p>
-			{body}
-		</p>
-	</a>
-</li> -->
 
-<div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 hover:border-gray-600 hover:scale-105 hover:transition-all	mt-12">
+<li class=" place-content-center place-items-center max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 hover:border-gray-500 hover:scale-105 hover:transition-all mt-12 animate-on-scroll">
     <a href={href}>
         <img class="rounded-t-lg" src={img} alt="" />
     </a>
@@ -80,7 +61,7 @@ const { href, title, body, technologies,img ,repo} = Astro.props;
         </a>
 		</section>
     </div>
-</div>
+</li>
 
 
 <style>

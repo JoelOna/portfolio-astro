@@ -6,6 +6,7 @@ interface Props {
 const { title } = Astro.props;
 
 import Navbar from '../components/Navbar.astro';
+
 ---
 
 <!DOCTYPE html>
@@ -14,8 +15,8 @@ import Navbar from '../components/Navbar.astro';
 		<meta charset="UTF-8" />
 		<meta name="description" content="Astro description">
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
+		<link rel="icon" type="image/svg+xml" href="/letra-j.png" />
+		<meta name="generator" content={Astro.generator} />	
 		<title>{title}</title>
 	</head>
 	<body>
@@ -23,6 +24,37 @@ import Navbar from '../components/Navbar.astro';
 		<slot />
 	</body>
 </html>
+<script>
+	document.addEventListener("DOMContentLoaded", function () {
+  const elements = document.querySelectorAll(".animate-on-scroll");
+
+  let lastScrollTop = 0; // Variable para rastrear la posición anterior del scroll
+
+  function checkVisibility() {
+    elements.forEach((element) => {
+      const windowHeight = window.innerHeight;
+      const elementTop = element.getBoundingClientRect().top;
+
+      if (elementTop < windowHeight && window.scrollY > lastScrollTop) {
+        // Si el elemento es visible y se hace scroll hacia abajo
+        element.classList.remove("desactivate");
+        element.classList.add("active");
+      } else if (elementTop >= windowHeight && window.scrollY < lastScrollTop) {
+        // Si el elemento no es visible y se hace scroll hacia arriba
+        element.classList.remove("active");
+        element.classList.add("desactivate");
+      }
+    });
+
+    lastScrollTop = window.scrollY; // Actualiza la posición anterior del scroll
+  }
+
+  window.addEventListener("scroll", checkVisibility);
+});
+
+	
+	
+	</script>
 <style is:global>
 	:root {
 		--accent: 136, 58, 234;
@@ -41,4 +73,19 @@ import Navbar from '../components/Navbar.astro';
 		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
 			Bitstream Vera Sans Mono, Courier New, monospace;
 	}
+	.animate-on-scroll {
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: opacity 1s, transform 1s;
+}
+
+.animate-on-scroll.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+.animate-on-scroll.desactivate {
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: opacity 1s, transform 1s;
+}
 </style>
