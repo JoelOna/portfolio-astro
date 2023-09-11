@@ -37,12 +37,12 @@ import Navbar from '../components/Navbar.astro';
 
       if (elementTop < windowHeight && window.scrollY > lastScrollTop) {
         // Si el elemento es visible y se hace scroll hacia abajo
-        element.classList.remove("desactivate");
+    
         element.classList.add("active");
-      } else if (elementTop >= windowHeight && window.scrollY < lastScrollTop) {
-        // Si el elemento no es visible y se hace scroll hacia arriba
-        element.classList.remove("active");
-        element.classList.add("desactivate");
+    //   } else if (elementTop >= windowHeight && window.scrollY < lastScrollTop) {
+    //     // Si el elemento no es visible y se hace scroll hacia arriba
+    //     element.classList.remove("active");
+    //     element.classList.add("desactivate");
       }
     });
 
