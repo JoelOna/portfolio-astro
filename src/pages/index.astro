@@ -7,20 +7,15 @@ import About from "../components/About.astro";
 ---
 
 <Layout title="Portfolio | Joel">
-	
-	<main class="container-sm">
-		<section class="md:pb-4 md:mb-24 ">
-		 <MainInfo img="/joel.jpeg" bio="FullStack Web developer" />
-		</section>
-		 <section class="lg:ms-96 lg:ps-[30rem]  md:ms-96 md:ps-72 md:pt-0 md:mt-0  sm:pt-[24rem] sm:mt-[50rem] sm:ms-72 pb-56 " >
-		 <About></About>
-		</section>
-		 <section class="lg:ms-80 lg:ps-72  md:ms-56 md:ps-60 mt-24 sm:ms-72 md:pb-72 sm:pb-56 ">
-			<Tech></Tech>
-		 </section>
+	<section class="w-full max-h-screen border-2">
+		<MainInfo img="/joel.jpeg" bio="FullStack Web developer" />
+	</section>
+	<main class="container mx-auto p-20 ">
+		<section class="mt-40">
+		 <!-- <About></About> -->
 
+		
 
-	  <section class=" lg:ms-96 lg:ps-72  md:ms-72 md:ps-60 mt-24 sm:ms-72 md:w-[78.5%] ">
 		<h3 class="text-white text-2xl pb-2 ">Proyectos</h3>
 		<hr class="w-auto">
 		<ul role="list" class="grid  place-content-center place-items-center sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3   gap-4 md:ps-3 "> 
@@ -50,8 +45,9 @@ import About from "../components/About.astro";
 		  img="/portfolio.png"
 		/>
 		</ul>
-	  </section>
-	  
+	
+	</section>
+	<Tech></Tech>
 	</main>
 	
   </Layout>
