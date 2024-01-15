@@ -4,54 +4,42 @@ import Card from "../components/Card.astro";
 import MainInfo from "../components/MainInfo.astro";
 import Tech from "../components/Tech.astro";
 import About from "../components/About.astro";
+import Experience from "../components/Experience.astro";
 ---
 
 <Layout title="Portfolio | Joel">
-	<section class="w-full max-h-screen border-2">
-		<MainInfo img="/joel.jpeg" bio="FullStack Web developer" />
-	</section>
-	<main class="container mx-auto p-20 ">
-		<section class="mt-40">
-		 <!-- <About></About> -->
-
+	<main class="container mx-auto px-20">
+		<section class="mt-32 pb-20">
+			<MainInfo img="/joel.jpeg" bio="FullStack Web developer" />
+		</section>
+		<section class="pb-20">
+			<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center text-black/80 dark:text-white/80"> <svg class="size-7" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M3 7m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v9a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z"></path><path d="M8 7v-2a2 2 0 0 1 2 -2h4a2 2 0 0 1 2 2v2"></path><path d="M12 12l0 .01"></path><path d="M3 13a20 20 0 0 0 18 0"></path></svg>
+				Experiencia laboral
+			</h2>
+			<Experience/>
+		</section>
+		<section class="pb-20">
+		
+				<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center text-black/80 dark:text-white/80"> <svg class="size-7" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M7 8l-4 4l4 4"></path><path d="M17 8l4 4l-4 4"></path><path d="M14 4l-4 16"></path></svg>
+					Proyectos
+					</h2>
 		
 
-		<h3 class="text-white text-2xl pb-2 ">Proyectos</h3>
-		<hr class="w-auto">
-		<ul role="list" class="grid  place-content-center place-items-center sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3   gap-4 md:ps-3 "> 
-	
-			<Card
-			  href="https://rick-and-morty-five-nu.vercel.app/"
-			  repo="https://github.com/JoelOna/rick-and-morty"
-			  title="Rick y Morty"
-			  body="Una aplicación que muestra los personajes, episodios y localizaciones de la serie 'Rick And Morty'."
-			  technologies={["/angular.svg", "/typescript.svg","/bootstrap.svg"]}
-			  img="/rickandmorty.png"
-			/>
-			<Card
-			href="https://leonardocaero.github.io/HAFIT"
-			repo="https://github.com/LeonardoCaero/HAFIT"
-			title="HAFIT"
-			body="Proyecto de final de curso sobre un tienda de venta de suplementos deportivos, accesorios, planes nutricionales y guias de ejercicios."
-			technologies={["/expressjs-icon.svg","/angular.svg", "/typescript.svg","/bootstrap.svg"]}
-			img="/hafit.png"
-		  />
-		  <Card
-		  href=""
-		  repo="https://github.com/JoelOna/portfolio-astro"
-		  title="Portfolio"
-		  body="Portfolio web dónde muestro información sobre mí como el stack tecnológico, proyectos personales, poder contactar conmigo vía redes sociales o correo electrónico, ver mi experiencia. "
-		  technologies={["/favicon.svg", "/tailwind.svg"]}
-		  img="/portfolio.png"
-		/>
-		</ul>
-	
+			<div
+				class="grid sm:grid-cols-1 gap-10 md:ps-3 "
+			>
+				<Card
+				/>
+			</div>
+		</section>
+		<section class="pb-20">
+			<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center text-black/80 dark:text-white/80"> <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-stackshare" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M19 6m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M19 18m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M5 12m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M7 12h3l3.5 6h3.5" /><path d="M17 6h-3.5l-3.5 6" /></svg>
+				Tecnologias
+			</h2>
+		<Tech />
 	</section>
-	<Tech></Tech>
 	</main>
-	
-  </Layout>
-  
+</Layout>
 
 <style>
 	* {

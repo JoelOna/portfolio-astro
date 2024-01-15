@@ -56,6 +56,10 @@ import Navbar from '../components/Navbar.astro';
 	
 	</script>
 <style is:global>
+	@font-face {
+		font-family: 'Montserrat';
+		src: url('../../public/fonts/Montserrat/Montserrat-VariableFont_wght.ttf');
+	}
 	:root {
 		--accent: 136, 58, 234;
 		--accent-light: 224, 204, 250;
@@ -63,10 +67,11 @@ import Navbar from '../components/Navbar.astro';
 		--accent-gradient: linear-gradient(45deg, rgb(var(--accent)), rgb(var(--accent-light)) 30%, white 60%);
 	}
 	html {
-		font-family: system-ui, sans-serif;
+		font-family: 'Montserrat';
 		background: #13151A;
 		background-size: 224px;
 		color-scheme: dark light;
+		
 	}
 	
 	code {

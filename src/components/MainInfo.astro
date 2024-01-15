@@ -47,7 +47,7 @@ const {img, bio} = Astro.props
 </aside> -->
 <script>
     let i = 0;
-const txt = '¡Soy Joel! FullStack web developer'; /* El texto */
+const txt = 'Hola, ¡Soy Joel! FullStack web developer'; /* El texto */
 const speed = 50; /* La velocidad/duración del efecto en milisegundos */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -68,20 +68,22 @@ function typeWriter() {
 }
 
 </script>
-<section class="my-48 flex items-center justify-center">
-    <div class="flex-col w-1/2 items-center border-2">
+<section class="grid grid-cols-2  gap">
+    <div class="items-center lg:w-auto md:w-[35rem]">
         <div class="pt-4 flex flex-wrap text-white text-md gap-2 justify-center">
-            <p id="demo" class="pb-4 text-3xl"></p>
-  <p class="text-center pb-8 text-xl">
-    Programador web junior con experencia desarollando aplicaciones con frameworks propios, <strong class="italic">Laravel, Wordpress, Javascript, CSS</strong>...
-  </p>
-            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-map-pin" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                <path d="M9 11a3 3 0 1 0 6 0a3 3 0 0 0 -6 0"></path>
-                <path d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0z"></path>
-             </svg>
-                 <label>Mollet del Vallès, BCN</label> 
+            <p id="demo" class="pb-4 text-3xl text-start"></p>
+                <p class="text-start pb-8 text-xl">
+                    Programador web junior con experencia desarollando aplicaciones con frameworks propios, <strong class="italic">Laravel, Wordpress, Javascript, CSS</strong>...
+                </p>
              </div>
+             <div clas>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-map-pin" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M9 11a3 3 0 1 0 6 0a3 3 0 0 0 -6 0"></path>
+                    <path d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0z"></path>
+                 </svg>
+                     <label>Mollet del Vallès, BCN</label> 
+              </div>
              <div class="pt-4 flex flex-wrap  text-white text-md gap-2 justify-center  hover:cursor-pointer hover:text-gray-400">
                 <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                     <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
@@ -105,8 +107,8 @@ function typeWriter() {
                  </a>
              </div>
     </div>
-    <div class="flex-col w-1/2 items-center border-2">
-        <div class="rounded-full flex items-center justify-center shadow-xl">
+    <div class="items-center">
+        <div class="rounded-full flex items-center justify-center ">
             <img src={img} alt="" srcset="" class="object-cover rounded-full w-64 h-64">
         </div>
     </div>
