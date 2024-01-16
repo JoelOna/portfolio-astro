@@ -5,49 +5,9 @@ interface Props{
 }
 const {img, bio} = Astro.props
 ---
-<!-- 
-<aside class="-ms-6 mt-12 md:fixed md:w-1/3 md:min-h-screen md:inset-0 md:bg-cover sm:absolute ">
-    <img src={img} class="absolute w-full h-full object-cover top-14 md:-top-14  blur-xl brightness-75 z- ">
-    <div class="grid place-content-center lg:mt-52 pt-24 blur-none "> 
-        <div class=" h-72 w-72 rounded-full flex items-center justify-center shadow-xl "> 
-            <img src={img} alt="" srcset="" class="object-cover rounded-full w-64 h-64">
-        </div>
-        <p class="text-center mt-12 text-white text-2xl ">{bio}</p>
-        <div class="pt-4 flex flex-wrap text-white text-md gap-2 justify-center">
-        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-map-pin" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-            <path d="M9 11a3 3 0 1 0 6 0a3 3 0 0 0 -6 0"></path>
-            <path d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0z"></path>
-         </svg>
-             <label>Mollet del Vallès, BCN</label> 
-         </div>
-         <div class="pt-4 flex flex-wrap  text-white text-md gap-2 justify-center  hover:cursor-pointer hover:text-gray-400">
-            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"></path>
-            </svg>
-            <a href="https://github.com/JoelOna" target="_blank">
-                 <label class="hover:cursor-pointer">/github.com/JoelOna</label> 
-             </a>
-         </div>
-         <div class="pt-4 flex flex-wrap text-white text-md gap-2 justify-center  hover:cursor-pointer hover:text-gray-400 ">
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-linkedin" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                    <path d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"></path>
-                    <path d="M8 11l0 5"></path>
-                    <path d="M8 8l0 .01"></path>
-                    <path d="M12 16l0 -5"></path>
-                    <path d="M16 16v-3a2 2 0 0 0 -4 0"></path>
-                </svg>
-            <a href="https://www.linkedin.com/in/joel-oña-ferrer/" target="_blank" >
-                <label class="hover:cursor-pointer">/in/joel-oña-ferrer</label> 
-             </a>
-         </div>
-    </div>
-</aside> -->
 <script>
     let i = 0;
-const txt = 'Hola, ¡Soy Joel! FullStack web developer'; /* El texto */
+const txt = 'Hola, ¡Soy Joel! FullStack developer'; /* El texto */
 const speed = 50; /* La velocidad/duración del efecto en milisegundos */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -68,15 +28,20 @@ function typeWriter() {
 }
 
 </script>
-<section class="grid grid-cols-2  gap">
-    <div class="items-center lg:w-auto md:w-[35rem]">
+<section class="grid md:grid-cols-2 sm:grid-cols-1 items-center ">
+    <div class="items-center">
+        <div class="flex items-center justify-center ">
+            <img src={img} alt="" srcset="" class="object-cover rounded-full w-64 h-64">
+        </div>
+    </div>
+    <div class="items-center">
         <div class="pt-4 flex flex-wrap text-white text-md gap-2 justify-center">
-            <p id="demo" class="pb-4 text-3xl text-start"></p>
-                <p class="text-start pb-8 text-xl">
-                    Programador web junior con experencia desarollando aplicaciones con frameworks propios, <strong class="italic">Laravel, Wordpress, Javascript, CSS</strong>...
+            <p id="demo" class="pb-4 text-3xl text-center"></p>
+                <p class="text-center pb-8 text-xl">
+                    Programador web junior con experencia desarollando aplicaciones con frameworks propios, <strong class="italic text-[#5695a3]">Laravel, Wordpress, Javascript, CSS</strong>...
                 </p>
              </div>
-             <div clas>
+             <div class="pt-4 flex flex-wrap  text-white text-md gap-2 justify-center  hover:cursor-pointer hover:text-gray-400">
                 <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-map-pin" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                     <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                     <path d="M9 11a3 3 0 1 0 6 0a3 3 0 0 0 -6 0"></path>
@@ -107,10 +72,6 @@ function typeWriter() {
                  </a>
              </div>
     </div>
-    <div class="items-center">
-        <div class="rounded-full flex items-center justify-center ">
-            <img src={img} alt="" srcset="" class="object-cover rounded-full w-64 h-64">
-        </div>
-    </div>
+    
 </section>
 
