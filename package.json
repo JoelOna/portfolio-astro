@@ -11,11 +11,13 @@
   },
   "dependencies": {
     "@astrojs/tailwind": "^5.0.0",
+    "@astrojs/vue": "^4.5.0",
     "aos": "^2.3.4",
-    "astro": "^3.0.7",
+    "astro": "^4.14.2",
     "atropos": "^2.0.2",
     "flowbite": "^2.2.1",
     "tailwindcss": "^3.3.3",
-    "typeit": "^8.7.1"
+    "typeit": "^8.7.1",
+    "vue": "^3.4.38"
   }
 }

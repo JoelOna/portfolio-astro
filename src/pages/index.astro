@@ -5,6 +5,7 @@ import MainInfo from "../components/MainInfo.astro";
 import Tech from "../components/Tech.astro";
 import About from "../components/About.astro";
 import Experience from "../components/Experience.astro";
+import PersonalProjects from "../components/PersonalProjects.vue";
 ---
 
 <Layout title="Porfolio | Joel">
@@ -24,7 +25,8 @@ import Experience from "../components/Experience.astro";
 					Proyectos
 				</h2>
 			<div class="grid sm:grid-cols-1 gap-32 md:ps-3 ps-0 ">
-				<Card/>
+				<!-- <Card/> -->
+				<PersonalProjects></PersonalProjects>
 			</div>
 		</section>
 		<section class="pb-20" id="tecnologias">
