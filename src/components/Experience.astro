@@ -1,5 +1,29 @@
 ---
 const EXPERIENCE = [
+{
+        time: "23/10/2024 - Actualidad",
+        title: "Backend Developer | TUYÚ Technology ",
+        description:
+            `Desarrollador Backend (Subcontratado a NTT Data para Banc Sabadell)<br /><br />
+
+            Trabajo como desarrollador backend en el equipo de NTT Data, brindando soporte a Banc Sabadell. Mis principales responsabilidades incluyen:<br /><br />
+
+            <strong>Mantenimiento y optimización del código</strong>: Gestión continua de aplicaciones backend en Laravel para asegurar la estabilidad, escalabilidad y eficiencia del sistema.<br /><br />
+
+            <strong>Desarrollo de nuevas funcionalidades</strong>: Implementación de nuevas características y mejoras según las necesidades del cliente.<br /><br />
+
+            <strong>Despliegue y gestión de actualizaciones</strong>: Implementación y seguimiento de nuevas versiones de código utilizando Jenkins para automatizar el proceso de despliegue.<br /><br />
+
+            <strong>Colaboración con equipos multidisciplinarios</strong>: Uso de herramientas como Jira para gestionar tareas y GitFlow para control de versiones y colaboración en equipo.<br /><br />
+
+            <strong>Tecnologías y herramientas utilizadas:</strong><br />
+            Backend: Laravel, PHP, MySQL<br />
+            Frontend: Vue.js, jQuery, JavaScript, Bootstrap<br />
+            Control de versiones: Git, GitFlow<br />
+            Automatización: Jenkins, CDD<br />
+            Gestión de proyectos: Jira<br />
+            Entorno de desarrollo: Línea de comandos Linux`
+    },
     {
         time: "26/02/2024 - 14/08/2024",
         title: "Backend Developer | ByteTravel S.A",
@@ -49,9 +73,7 @@ const EXPERIENCE = [
                     <h3 class="text-lg font-semibold text-[#5695a3] ">
                         {title}
                     </h3>
-                    <p class="mb-4 text-base font-normal text-gray-400">
-                       {description}
-                    </p>
+                    <p class="mb-4 text-base font-normal text-gray-400" set:html={description}/>
                 </li>  
         ))
     }
